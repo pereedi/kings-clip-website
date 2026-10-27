@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Design tokens — exact port of the source tailwind.config theme.extend.
+   Colors are stored twice: as hex and as an "R G B" triplet so that
+   opacity variants (e.g. Tailwind's `bg-primary-container/20`) can be
+   written as rgb(var(--rgb-primary-container) / .2).
+   ========================================================================== */
+:root {
+  /* ---- Colors (hex) ---- */
+  --secondary-container: #ef35ff;
+  --on-secondary-fixed-variant: #7e0089;
+  --error-container: #93000a;
+  --on-secondary-container: #4e0055;
+  --on-tertiary: #412d00;
+  --outline: #8c90a1;
+  --surface: #0c1323;
+  --inverse-primary: #0056d0;
+  --on-primary: #002c72;
+  --background: #0c1323;
+  --on-tertiary-container: #fffcff;
+  --on-primary-fixed-variant: #0040a0;
+  --surface-container-lowest: #060e1e;
+  --on-primary-fixed: #001847;
+  --on-tertiary-fixed: #271900;
+  --error: #ffb4ab;
+  --surface-container-low: #141b2c;
+  --inverse-surface: #dbe2f9;
+  --secondary-fixed-dim: #ffa9fd;
+  --tertiary-fixed-dim: #ffba20;
+  --on-primary-container: #fffcff;
+  --surface-tint: #b1c5ff;
+  --primary-fixed-dim: #b1c5ff;
+  --surface-container-high: #232a3b;
+  --on-tertiary-fixed-variant: #5e4200;
+  --on-secondary-fixed: #37003c;
+  --primary: #b1c5ff;
+  --on-surface-variant: #c2c6d8;
+  --surface-bright: #32394b;
+  --surface-variant: #2d3546;
+  --outline-variant: #424655;
+  --surface-container: #181f30;
+  --tertiary-fixed: #ffdea8;
+  --on-background: #dbe2f9;
+  --secondary: #ffa9fd;
+  --on-error-container: #ffdad6;
+  --secondary-fixed: #ffd6fa;
+  --on-error: #690005;
+  --inverse-on-surface: #293042;
+  --primary-fixed: #dae2ff;
+  --tertiary-container: #996d00;
+  --surface-container-highest: #2d3546;
+  --on-surface: #dbe2f9;
+  --surface-dim: #0c1323;
+  --primary-container: #006bff;
+  --tertiary: #ffba20;
+  --on-secondary: #590061;
+
+  /* ---- Colors (RGB triplets for alpha variants) ---- */
+  --rgb-secondary-container: 239 53 255;
+  --rgb-error-container: 147 0 10;
+  --rgb-on-secondary-container: 78 0 85;
+  --rgb-outline-variant: 66 70 85;
+  --rgb-inverse-primary: 0 86 208;
+  --rgb-surface-container-lowest: 6 14 30;
+  --rgb-surface-container-low: 20 27 44;
+  --rgb-surface-container: 24 31 48;
+  --rgb-surface-container-high: 35 42 59;
+  --rgb-surface-container-highest: 45 53 70;
+  --rgb-primary: 177 197 255;
+  --rgb-primary-container: 0 107 255;
+  --rgb-secondary: 255 169 253;
+  --rgb-tertiary: 255 186 32;
+  --rgb-tertiary-container: 153 109 0;
+  --rgb-on-surface: 219 226 249;
+  --rgb-on-surface-variant: 194 198 216;
+
+  /* ---- Spacing ---- */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --gutter: 1.5rem;
+  --gutter-mobile: 1rem;
+  --margin: 3rem;
+  --margin-mobile: 1.25rem;
+
+  /* ---- Radii ---- */
+  --radius: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ---- Fonts ---- */
+  --font-sans: "Inter";
+  --font-display: "Manrope";
+
+  /* ---- Tailwind default shadows ---- */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+  /* ---- Tailwind default transition ---- */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur: 150ms;
+}

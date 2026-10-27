@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Typography — the 14 text styles from the source tailwind.config fontSize
+   + fontFamily (Tailwind `font-X text-X` pairs). Each class sets family,
+   size, line-height, letter-spacing and weight exactly like the original.
+   ========================================================================== */
+body {
+  background-color: var(--surface-container-lowest);
+  color: var(--on-surface);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--primary-container);
+  color: var(--on-primary-container);
+}
+
+.t-display-hero        { font-family: var(--font-display); font-size: 64px; line-height: 72px; letter-spacing: -0.03em; font-weight: 800; }
+.t-display-hero-mobile { font-family: var(--font-display); font-size: 38px; line-height: 44px; letter-spacing: -0.02em; font-weight: 800; }
+.t-headline-xl         { font-family: var(--font-display); font-size: 44px; line-height: 52px; letter-spacing: -0.02em; font-weight: 700; }
+.t-headline-xl-mobile  { font-family: var(--font-display); font-size: 30px; line-height: 38px; letter-spacing: -0.015em; font-weight: 700; }
+.t-headline-lg         { font-family: var(--font-display); font-size: 32px; line-height: 40px; letter-spacing: -0.015em; font-weight: 700; }
+.t-headline-lg-mobile  { font-family: var(--font-display); font-size: 24px; line-height: 32px; letter-spacing: -0.01em; font-weight: 700; }
+.t-headline-md         { font-family: var(--font-display); font-size: 24px; line-height: 32px; letter-spacing: -0.01em; font-weight: 600; }
+.t-headline-sm         { font-family: var(--font-display); font-size: 20px; line-height: 28px; letter-spacing: -0.005em; font-weight: 600; }
+.t-body-lg             { font-family: var(--font-sans); font-size: 18px; line-height: 28px; font-weight: 400; }
+.t-body-md             { font-family: var(--font-sans); font-size: 15px; line-height: 24px; font-weight: 400; }
+.t-body-sm             { font-family: var(--font-sans); font-size: 13px; line-height: 20px; font-weight: 400; }
+.t-label-md            { font-family: var(--font-sans); font-size: 14px; line-height: 18px; letter-spacing: 0.01em; font-weight: 600; }
+.t-label-sm            { font-family: var(--font-sans); font-size: 12px; line-height: 16px; letter-spacing: 0.02em; font-weight: 500; }
+.t-code                { font-family: var(--font-sans); font-size: 13px; line-height: 18px; letter-spacing: 0.05em; font-weight: 600; }
+
+/* Weight / tracking modifiers (declared after the type styles so they win,
+   matching Tailwind's utility ordering). */
+.fw-semibold { font-weight: 600; }
+.fw-bold     { font-weight: 700; }
+.tracking-tight   { letter-spacing: -0.025em; }
+.tracking-wider   { letter-spacing: 0.05em; }
+.tracking-widest  { letter-spacing: 0.1em; }
+.uppercase { text-transform: uppercase; }

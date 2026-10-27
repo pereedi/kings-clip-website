@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Shared building blocks used across sections.
+   ========================================================================== */
+
+/* ---- Material Symbols icon (font-size set per usage) ---- */
+.icon {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+.icon--fill { font-variation-settings: "FILL" 1; }
+
+/* ---- Accent tokens: set --accent / --accent-rgb on a component ---- */
+.accent-primary   { --accent: var(--primary);   --accent-rgb: var(--rgb-primary); }
+.accent-secondary { --accent: var(--secondary); --accent-rgb: var(--rgb-secondary); }
+.accent-tertiary  { --accent: var(--tertiary);  --accent-rgb: var(--rgb-tertiary); }
+
+/* ---- Layout ---- */
+.section {
+  width: 100%;
+  padding: var(--space-2xl) var(--gutter);
+}
+.section--tint-30 { background-color: rgb(var(--rgb-surface-container-low) / 0.3); }
+.section--tint-40 { background-color: rgb(var(--rgb-surface-container-low) / 0.4); }
+
+.container { max-width: 1440px; margin-left: auto; margin-right: auto; }
+.container--1200 { max-width: 1200px; margin-left: auto; margin-right: auto; }
+.container--900 { max-width: 900px; margin-left: auto; margin-right: auto; }
+
+/* ---- Section heading blocks ---- */
+.eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent, var(--primary));
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: 44px;
+  line-height: 52px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--on-surface);
+}
+.section-lead {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--on-surface-variant);
+}
+.section-head--center { text-align: center; margin-left: auto; margin-right: auto; }
+.section-head--split {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+@media (min-width: 768px) {
+  .section-head--split { flex-direction: row; align-items: flex-end; }
+}
+
+/* ---- Buttons ---- */
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem var(--space-xl);
+  border-radius: var(--radius-xl);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  color: var(--on-primary-container);
+  background-image: linear-gradient(to right, var(--primary-container), var(--inverse-primary), var(--secondary-container));
+  box-shadow: 0 0 32px rgba(0, 107, 255, 0.45);
+  transition: all var(--dur) var(--ease);
+}
+.btn-hero:hover { box-shadow: 0 0 44px rgba(239, 53, 255, 0.5); transform: translateY(-0.125rem); }
+.btn-hero:active { transform: translateY(0); }
+.btn-hero .icon { font-size: 20px; }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem var(--space-lg);
+  border-radius: var(--radius-xl);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  color: var(--on-surface);
+  transition: color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+.btn-ghost:hover { background-color: var(--surface-container-highest); }
+
+/* ---- Media that fills its box (images and videos) ---- */
+.fill-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.zoom-on-hover { transition: transform var(--dur) var(--ease); }
+.group:hover .zoom-on-hover { transform: scale(1.05); }
+
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---- Visually hidden (a11y) ---- */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
+}
